@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDNPLAB07">
         <activity
+            android:name=".UbicacionesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalendarioActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RutasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UsuariosActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
