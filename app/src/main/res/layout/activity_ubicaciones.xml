@@ -6,13 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".UbicacionesActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ubicaciones"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+
+
+    <Spinner
+        android:id="@+id/spId3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/inputX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spId3" />
+
+    <EditText
+        android:id="@+id/inputY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Y"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputX" />
+    <EditText
+        android:id="@+id/inputZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Z"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputY" />
+    <Button
+        android:id="@+id/btnInsertarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="30dp"
+        android:onClick="insertar"
+        android:text="INSERTAR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputZ" />
+    <Button
+        android:id="@+id/btnActualizarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="actualizar"
+        android:text="ACTUALIZAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/btnInsertarUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/inputZ" />
+    <Button
+        android:id="@+id/btnEliminarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:onClick="eliminar"
+        android:text="ELIMINAR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsertarUbicacion" />
+    <Button
+        android:id="@+id/btnCancelarUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="cancelar"
+        android:text="CANCELAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminarUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarUbicacion" />
 </androidx.constraintlayout.widget.ConstraintLayout>
