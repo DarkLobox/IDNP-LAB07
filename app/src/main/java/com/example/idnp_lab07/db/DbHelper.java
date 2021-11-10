@@ -8,10 +8,11 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NOMBRE = "lab07.db";
     public static final String TABLE_USUARIOS = "t_usuarios";
     public static final String TABLE_RUTAS = "t_rutas";
+    public static final String TABLE_UBICACIONES = "t_ubicaciones";
 
 
     public DbHelper(@Nullable Context context) {
@@ -29,11 +30,17 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "latitud FLOAT NOT NULL," +
                 "longitud FLOAT NOT NULL)");
+        db.execSQL("CREATE TABLE " + TABLE_UBICACIONES + "(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "X FLOAT NOT NULL," +
+                "Y FLOAT NOT NULL," +
+                "Z FLOAT NOT NULL)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE " + TABLE_USUARIOS);
+        db.execSQL("DROP TABLE " + TABLE_RUTAS);
         onCreate(db);
     }
 }
